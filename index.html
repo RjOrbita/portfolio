@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Roland Jay Orbita — Fresh Graduate, Full-Stack Developer, Designer & Researcher. Explore my projects, research, and experience." />
+  <title>Roland Jay Orbita — Portfolio</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Devicons for skill icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="nav-logo-link">
+        <span class="logo-text">RJO</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#research" class="nav-link" data-section="research">Research</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-icon sun">☀️</span>
+          <span class="theme-icon moon">🌙</span>
+        </button>
+        <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="hero" class="hero">
+    <canvas id="particle-canvas"></canvas>
+
+    <div class="hero-container">
+      <div class="hero-text" data-aos="fade-right">
+        <p class="hero-greeting">👋 Hello, World! I'm</p>
+        <h1 class="hero-name">Roland Jay<br /><span class="gradient-text">Orbita</span></h1>
+        <div class="hero-typing-wrapper">
+          <span class="typing-prefix">A passionate </span>
+          <span id="typing-text" class="typing-text"></span>
+          <span class="typing-cursor">|</span>
+        </div>
+        <p class="hero-tagline">
+          Building things that live on the internet, designing experiences that delight,
+          providing esport entertainment, and researching solutions that matter.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary" id="hero-view-work">View My Work</a>
+          <a href="assets/resume.pdf" class="btn btn-outline" id="hero-resume" target="_blank" download>Download
+            Resume</a>
+        </div>
+      </div>
+
+      <div class="hero-avatar" data-aos="fade-left">
+        <div class="orbit-system">
+          <!-- Decorative orbit track -->
+          <div class="orbit-track"></div>
+          <!-- Glowing center orb -->
+          <div class="orbit-center">
+            <span class="orbit-center-text">RJO</span>
+            <div class="orbit-center-pulse"></div>
+          </div>
+          <!-- Spinning orbit arm -->
+          <div class="orbit-arm">
+            <!-- Photo 1: top position -->
+            <div class="orbit-photo-wrap photo-top">
+              <div class="orbit-photo">
+                <img src="assets/images/profile.jpg" alt="Roland Jay Orbita — Graduation Photo 1" id="profile-img-1"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+                <div class="orbit-photo-fallback" style="display:none">📸</div>
+              </div>
+            </div>
+            <!-- Photo 2: bottom position -->
+            <div class="orbit-photo-wrap photo-bottom">
+              <div class="orbit-photo">
+                <img src="assets/images/profile2.jpg" alt="Roland Jay Orbita — Graduation Photo 2" id="profile-img-2"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+                <div class="orbit-photo-fallback" style="display:none">📸</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="avatar-badge badge-1">💻 Dev</div>
+        <div class="avatar-badge badge-2">🎨 Design</div>
+        <div class="avatar-badge badge-3">🔬 Research</div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-down" aria-label="Scroll down">
+      <div class="scroll-chevron"></div>
+    </a>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="section about">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Get to know me</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-bio" data-aos="fade-right">
+          <p>
+            Hi! I'm <strong>Roland Jay Orbita</strong>, a Computer Science graduate from the
+            <strong>University of Southern Mindanao</strong> with diverse experience spanning
+            software development, telecommunications fieldwork, and production management.
+          </p>
+          <p>
+            I thrive at the intersection of <strong>technology, problem-solving, and teamwork</strong> —
+            adept at coordinating event logistics, directing teams, and bridging the gap between
+            software systems and hardware operations. I'm a collaborative problem-solver and team
+            leader committed to continuous improvement.
+          </p>
+          <p>
+            Whether I'm building a machine learning system, developing a mobile app, or managing
+            a live esports production, I bring dedication and a growth mindset to everything I do. ☕
+          </p>
+          <a href="#contact" class="btn btn-primary" id="about-contact-btn">Let's Connect</a>
+        </div>
+
+        <div class="about-stats" data-aos="fade-left">
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+            <span class="stat-icon">🚀</span>
+            <span class="stat-number" data-target="5">0</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+            <span class="stat-icon">💡</span>
+            <span class="stat-number" data-target="4">0</span>
+            <span class="stat-label">Years Coding</span>
+          </div>
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+            <span class="stat-icon">🏆</span>
+            <span class="stat-number" data-target="2">0</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+            <span class="stat-icon">☕</span>
+            <span class="stat-number" data-target="999">0</span>
+            <span class="stat-label">Cups of Coffee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE ========== -->
+  <section id="experience" class="section experience">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Where I've been</span>
+        <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <!-- 1. Most recent: UEC Esports (2025 - Present) -->
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Organizer / Production Team</h3>
+                <p class="timeline-company">🎮 UEC Esports</p>
+              </div>
+              <span class="timeline-date">2025 – Present</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Coordinated live esports productions by managing tournament logistics and directing teams on the
+                ground</li>
+              <li>Oversaw live broadcasting operations, ensuring smooth event delivery across all production stages</li>
+              <li>Executed digital content strategies for post-match results and audience announcements</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Event Management</span>
+              <span class="tag">Live Broadcasting</span>
+              <span class="tag">Content Strategy</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. OJT at Makilala Cable TV (Jul - Aug 2025) -->
+        <div class="timeline-item timeline-item-right" data-aos="fade-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">On The Job Training</h3>
+                <p class="timeline-company">📡 Makilala Cable TV</p>
+              </div>
+              <span class="timeline-date">Jul 2025 – Aug 2025</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Assisted technicians with the installation, maintenance, and troubleshooting of cable lines and
+                subscriber equipment</li>
+              <li>Gained hands-on experience bridging software systems and hardware operations in a live
+                telecommunications environment</li>
+              <li>Coordinated with field teams to resolve subscriber issues and ensure network uptime</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Telecommunications</span>
+              <span class="tag">Hardware Support</span>
+              <span class="tag">Field Operations</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. AIA Philippines (Dec 2024 - Jun 2025) -->
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3 class="timeline-role">Licenced Life Insurance Agent</h3>
+                <p class="timeline-company">🏢 AIA Philippines</p>
+              </div>
+              <span class="timeline-date">Dec 2024 – Jun 2025</span>
+            </div>
+            <ul class="timeline-points">
+              <li>Provided personalized insurance solutions to clients, building trust through clear communication and
+                product knowledge</li>
+              <li>Managed client relations and cross-functional collaboration with the regional team</li>
+              <li>Developed strong interpersonal and sales skills through consistent client engagement</li>
+            </ul>
+            <div class="timeline-tags">
+              <span class="tag">Client Relations</span>
+              <span class="tag">Sales</span>
+              <span class="tag">Financial Services</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section id="projects" class="section projects">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I've built</span>
+        <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+      </div>
+
+      <div class="projects-grid projects-grid-2" id="projects-grid">
+
+        <!-- Project 1: Job Search Website -->
+        <div class="project-card project-card-clickable" data-project="jobsearch" data-aos="fade-up"
+          data-aos-delay="100">
+          <div class="project-img-wrapper">
+            <img src="assets/images/projects/jobsearch/1.jpg" alt="Job Search Website" class="project-img"
+              onerror="this.parentElement.classList.add('img-fallback')" />
+            <div class="project-click-hint">
+              <span class="hint-icon">🔍</span>
+              <span>Click to explore</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row">
+              <h3 class="project-title">Job Search Website</h3>
+              <span class="tag tag-cyan">Web</span>
+            </div>
+            <p class="project-desc">A web platform designed to connect job seekers with employers. Features job
+              listings, applicant profiles, and a streamlined application process built with a PHP and MySQL backend.
+            </p>
+            <div class="project-tags">
+              <span class="tag tag-purple">PHP</span>
+              <span class="tag tag-cyan">MySQL</span>
+              <span class="tag">HTML &amp; CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-explore-hint">👆 Click card to view screenshots</span>
+              <a href="https://github.com/RjOrbita/qr_attendance_app.git" class="project-gh-link"
+                id="proj-jobsearch-github" target="_blank" onclick="event.stopPropagation()">🐙 GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: QRoster Mobile App -->
+        <div class="project-card project-card-clickable" data-project="qroster" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img-wrapper">
+            <img src="assets/images/projects/qroster/1.jpg" alt="QRoster Mobile App" class="project-img"
+              onerror="this.parentElement.classList.add('img-fallback')" />
+            <div class="project-click-hint">
+              <span class="hint-icon">🔍</span>
+              <span>Click to explore</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-title-row">
+              <h3 class="project-title">QRoster</h3>
+              <span class="tag tag-purple">Mobile App</span>
+            </div>
+            <p class="project-desc">A co-developed mobile application designed for seamless attendance tracking and
+              roster management using QR code scanning technology.</p>
+            <div class="project-tags">
+              <span class="tag tag-purple">React Native</span>
+              <span class="tag tag-cyan">Expo</span>
+              <span class="tag">Firebase</span>
+            </div>
+            <div class="project-footer">
+              <span class="project-explore-hint">👆 Click card to view screenshots</span>
+              <a href="https://github.com/RjOrbita/qr_attendance_app" class="project-gh-link" id="proj-qroster-github"
+                target="_blank" onclick="event.stopPropagation()">🐙 GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RESEARCH / THESIS ========== -->
+  <section id="research" class="section research">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Academic contribution</span>
+        <h2 class="section-title">Thesis &amp; <span class="gradient-text">Research</span></h2>
+      </div>
+
+      <div class="research-card" data-aos="fade-up">
+        <div class="research-card-top">
+          <!-- Thumbnail strip -->
+          <div class="research-thumb-strip" id="research-thumb-strip">
+            <img src="assets/images/projects/thesis/1.jpg" alt="Thesis Screenshot 1" class="research-thumb"
+              onerror="this.style.display='none'" />
+            <img src="assets/images/projects/thesis/2.jpg" alt="Thesis Screenshot 2" class="research-thumb"
+              onerror="this.style.display='none'" />
+            <img src="assets/images/projects/thesis/3.jpg" alt="Thesis Screenshot 3" class="research-thumb"
+              onerror="this.style.display='none'" />
+            <button class="research-gallery-btn" id="research-gallery-btn" data-project="thesis-research">
+              <span>🖼️ View All Screenshots</span>
+              <span class="gallery-btn-arrow">↗</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="research-badge">📖 Undergraduate Thesis</div>
+        <h3 class="research-title">
+          Image Forgery Detection Using Support Vector Machine and Multi-Feature Extraction
+        </h3>
+        <div class="research-meta">
+          <span class="research-meta-item">📅 Nov 2025 – May 2026</span>
+          <span class="research-meta-item">🏫 University of Southern Mindanao</span>
+          <span class="research-meta-item">🎓 BS Computer Science</span>
+        </div>
+        <p class="research-abstract">
+          <strong>Abstract:</strong> This study explores the detection of digitally manipulated images using
+          a Support Vector Machine (SVM) classifier paired with multi-feature extraction techniques.
+          A machine learning pipeline was developed leveraging four image analysis domains —
+          <strong>ELA (Error Level Analysis), Histogram, DCT (Discrete Cosine Transform), and DWT
+            (Discrete Wavelet Transform)</strong> — to detect and classify forged media with higher
+          precision than single-feature approaches.
+        </p>
+        <div class="research-highlights">
+          <div class="research-highlight-item">
+            <span class="highlight-icon">🎯</span>
+            <div>
+              <strong>Objective</strong>
+              <p>Develop and evaluate an image forgery detection system using SVM with 4-domain multi-feature extraction
+              </p>
+            </div>
+          </div>
+          <div class="research-highlight-item">
+            <span class="highlight-icon">🔬</span>
+            <div>
+              <strong>Methodology</strong>
+              <p>Machine learning pipeline with ELA, Histogram, DCT &amp; DWT feature extraction fed into an SVM
+                classifier</p>
+            </div>
+          </div>
+          <div class="research-highlight-item">
+            <span class="highlight-icon">💡</span>
+            <div>
+              <strong>Key Contribution</strong>
+              <p>A robust multi-domain feature fusion approach that outperforms single-feature image forgery detection
+                methods</p>
+            </div>
+          </div>
+        </div>
+        <div class="research-actions">
+          <a href="https://drive.google.com/file/d/142T7poUiaKIH9JITQXFRius5Iq1Rg_Eq/view?usp=sharing"
+            class="btn btn-primary" id="research-paper-link">Read Full Paper ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section id="skills" class="section skills">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">What I work with</span>
+        <h2 class="section-title">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Languages -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="skill-category-title">📝 Languages</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="devicon-html5-plain colored"></i>
+              <span>HTML &amp; CSS</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="devicon-javascript-plain colored"></i>
+              <span>JavaScript</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="devicon-php-plain colored"></i>
+              <span>PHP</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="72"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="devicon-java-plain colored"></i>
+              <span>Java</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="devicon-python-plain colored"></i>
+              <span>Python</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="devicon-csharp-plain colored"></i>
+              <span>C#</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="65"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frameworks & Mobile -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="skill-category-title">📱 Frameworks</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="devicon-react-plain colored"></i>
+              <span>React Native</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="devicon-react-plain colored"></i>
+              <span>Expo</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="72"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="devicon-laravel-plain colored"></i>
+              <span>Laravel</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="70"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="devicon-bootstrap-plain colored"></i>
+              <span>Bootstrap</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="78"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Databases & Dev Tools -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="skill-category-title">🛠️ Dev Tools &amp; Databases</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="devicon-mysql-plain colored"></i>
+              <span>MySQL</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="devicon-mysql-plain"></i>
+              <span>SQL</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="78"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="devicon-git-plain colored"></i>
+              <span>Git &amp; GitHub</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="82"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="devicon-vscode-plain colored"></i>
+              <span>VS Code</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="90"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design & Creative -->
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+          <h3 class="skill-category-title">🎨 Design &amp; Creative</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <i class="devicon-figma-plain colored"></i>
+              <span>Figma</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="devicon-canva-plain colored"></i>
+              <span>Canva</span>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="85"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION ========== -->
+  <section id="education" class="section education">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Academic background</span>
+        <h2 class="section-title">Education & <span class="gradient-text">Certifications</span></h2>
+      </div>
+
+      <div class="edu-grid">
+        <div class="edu-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-body">
+            <h3 class="edu-degree">Bachelor of Science in Computer Science</h3>
+            <p class="edu-school">University of Southern Mindanao, Kabacan</p>
+            <p class="edu-date">2022 – 2026</p>
+            <p class="edu-detail">Kabacan, Cotabato</p>
+          </div>
+        </div>
+
+        <div class="edu-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="edu-icon">🤖</div>
+          <div class="edu-body">
+            <h3 class="edu-degree">Artificial Intelligence Fundamentals</h3>
+            <p class="edu-school">IBM</p>
+            <p class="edu-date">2024</p>
+            <p class="edu-detail">Certification · IBM SkillsBuild</p>
+          </div>
+        </div>
+
+        <div class="edu-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="edu-icon">🔐</div>
+          <div class="edu-body">
+            <h3 class="edu-degree">Introduction to Cybersecurity</h3>
+            <p class="edu-school">CISCO</p>
+            <p class="edu-date">2024</p>
+            <p class="edu-detail">Certification · Cisco Networking Academy</p>
+          </div>
+        </div>
+
+        <div class="edu-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="edu-icon">🎮</div>
+          <div class="edu-body">
+            <h3 class="edu-degree">Esports Production &amp; Management</h3>
+            <p class="edu-school">UEC Esports</p>
+            <p class="edu-date">2025 – Present</p>
+            <p class="edu-detail">Organizer &amp; Production Team </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section contact">
+    <div class="section-container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-tag">Get in touch</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <p class="section-subtitle">
+          Whether you have a project in mind, a question, or just want to say hi —
+          my inbox is always open. ✉️
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <div>
+              <p class="contact-label">Email</p>
+              <a href="mailto:rolandjayorbita@gmail.com" class="contact-value"
+                id="contact-email">rolandjayorbita@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">💼</span>
+            <div>
+              <p class="contact-label">LinkedIn</p>
+              <a href="https://www.linkedin.com/in/roland-jay-orbita-a7513226a/" class="contact-value"
+                id="contact-linkedin" target="_blank">roland-jay-orbita</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🐙</span>
+            <div>
+              <p class="contact-label">GitHub</p>
+              <a href="https://github.com/RjOrbita" class="contact-value" id="contact-github"
+                target="_blank">github.com/RjOrbita</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <p class="contact-label">Location</p>
+              <p class="contact-value">Makilala, Cotabato, Philippines 🇵🇭</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" data-aos="fade-left">
+          <div class="form-group">
+            <label for="form-name">Your Name</label>
+            <input type="text" id="form-name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="form-email">Your Email</label>
+            <input type="email" id="form-email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="form-subject">Subject</label>
+            <input type="text" id="form-subject" name="subject" placeholder="Project Inquiry" />
+          </div>
+          <div class="form-group">
+            <label for="form-message">Message</label>
+            <textarea id="form-message" name="message" rows="5" placeholder="Tell me about your project or idea..."
+              required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="form-submit">Send Message 🚀</button>
+          <p class="form-status" id="form-status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-text">
+        Designed & built with 💜 by <span class="gradient-text">Roland Jay Orbita</span>
+      </p>
+      <p class="footer-sub">© 2024 · All rights reserved</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- ========== PROJECT / RESEARCH MODAL ========== -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+
+      <!-- Close button -->
+      <button class="modal-close" id="modal-close" aria-label="Close modal">×</button>
+
+      <!-- Image Carousel -->
+      <div class="modal-gallery">
+        <button class="gallery-nav gallery-prev" id="gallery-prev" aria-label="Previous image">&#8249;</button>
+        <div class="gallery-viewport">
+          <img class="gallery-main-img" id="gallery-main-img" src="" alt="Project screenshot" />
+          <div class="gallery-placeholder" id="gallery-placeholder">
+            <span>🖼️</span>
+            <p>Drop your screenshots into the folder<br /><code id="gallery-folder-hint"></code></p>
+          </div>
+        </div>
+        <button class="gallery-nav gallery-next" id="gallery-next" aria-label="Next image">&#8250;</button>
+        <div class="gallery-counter" id="gallery-counter">1 / 1</div>
+        <div class="gallery-dots" id="gallery-dots"></div>
+      </div>
+
+      <!-- Modal Info -->
+      <div class="modal-info">
+        <div class="modal-header-row">
+          <div>
+            <h3 class="modal-title" id="modal-title"></h3>
+            <div class="modal-tags" id="modal-tags"></div>
+          </div>
+          <a href="#" class="btn btn-primary modal-gh-btn" id="modal-github" target="_blank">🐙 View on GitHub</a>
+        </div>
+        <p class="modal-desc" id="modal-desc"></p>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
