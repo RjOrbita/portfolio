@@ -281,13 +281,13 @@
 
     // Hardcoded project data to populate modal easily
     const projectData = {
-      'jobsearch': {
-        title: 'Job Search Website',
-        tags: ['PHP', 'MySQL', 'HTML & CSS', 'JavaScript'],
-        desc: 'A web platform designed to connect job seekers with employers. Features job listings, applicant profiles, and a streamlined application process built with a PHP and MySQL backend.',
-        github: 'https://github.com/RjOrbita',
-        folder: 'assets/images/projects/jobsearch/',
-        images: ['1.jpg', '2.jpg', '3.jpg'] // We assume up to 3 images
+      'tournament': {
+        title: 'Tournament Draft Room',
+        tags: ['HTML & CSS', 'JavaScript', 'Firebase', 'Realtime DB'],
+        desc: 'A real-time, browser-based blind-bid draft platform for tournaments. Admins create rooms, load a player pool, and captains compete in sealed auctions — all bids revealed simultaneously. Features real-time sync, spectator mode, CSV import, and drag-to-reorder draft turns.',
+        github: 'https://github.com/RjOrbita/tournament-draft-room',
+        folder: 'assets/images/projects/tournament-draft-room/',
+        images: ['1.jpg', '2.jpg', '3.jpg']
       },
       'qroster': {
         title: 'QRoster Mobile App',
